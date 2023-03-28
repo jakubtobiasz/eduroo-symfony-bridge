@@ -1,0 +1,40 @@
+name: 🐛 Bug
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug", "task"]
+body:
+    -
+        type: textarea
+        attributes:
+            label: Description
+            description: A clear and concise description of what the problem is.
+        validations:
+            required: true
+    -
+        type: textarea
+        attributes:
+            label: Tasks
+            description: List of tasks for this ticket to be considered done.
+        validations:
+            required: true
+    -
+        type: dropdown
+        id: version
+        attributes:
+            label: Version
+            description: On which version this bug occurs?
+            options:
+                - main
+        validations:
+            required: true
+    -
+        type: checkboxes
+        id: terms
+        attributes:
+            label: Code of Conduct
+            description: By submitting this issue, you agree to follow our [Code of Conduct](https://eduroo.dev/community/code-of-conduct)
+            options:
+                -   label: I agree to follow this project's Code of Conduct
+                    required: true
+        validations:
+            required: true

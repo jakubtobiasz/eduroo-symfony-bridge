@@ -1,0 +1,17 @@
+name: Continuous Integration
+
+on:
+    pull_request:
+        paths-ignore:
+            - "*.md"
+    push: ~
+    workflow_dispatch: ~
+
+concurrency:
+    group: ci-${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    static-checks:
+        name: Static checks
+        uses: ./.github/workflows/ci__static-checks.yaml

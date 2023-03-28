@@ -1,0 +1,41 @@
+name: ✨ Feature
+description: File a feature request
+title: "[Feature]: "
+labels: ["feature", "epic"]
+body:
+    -
+        type: textarea
+        attributes:
+            label: Description
+            description: A clear and concise description of the feature you want to be added.
+        validations:
+            required: true
+    -
+        type: textarea
+        attributes:
+            label: Tasks
+            description: List of tasks for this ticket to be considered done.
+        validations:
+            required: true
+    -
+        type: dropdown
+        id: target-version
+        attributes:
+            label: Target version
+            description: What version should this feature be released in?
+            options:
+                - next major
+                - next minor
+        validations:
+            required: true
+    -
+        type: checkboxes
+        id: terms
+        attributes:
+            label: Code of Conduct
+            description: By submitting this issue, you agree to follow our [Code of Conduct](https://eduroo.dev/community/code-of-conduct)
+            options:
+                -   label: I agree to follow this project's Code of Conduct
+                    required: true
+        validations:
+            required: true

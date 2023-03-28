@@ -1,0 +1,53 @@
+{
+  "name": "eduroo/symfony-bridge",
+  "description": "The Symfony Bridge created for Eduroo Framework",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Eduroo\\Bridge\\Symfony\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\App\\": ".app/src"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jakub Tobiasz",
+      "email": "jakub@eduroo.dev"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "symfony/config": "^6.2",
+    "symfony/dependency-injection": "^6.2",
+    "symfony/http-kernel": "^6.2"
+  },
+  "require-dev": {
+    "captainhook/captainhook": "^5.16",
+    "mockery/mockery": "^1.5",
+    "pestphp/pest": "^2.2",
+    "phpstan/phpstan": "^1.10",
+    "symplify/easy-coding-standard": "^11.3",
+    "vimeo/psalm": "^5.8"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-main": "0.1-dev"
+    }
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": ".framework/**/**"
+    }
+  ]
+}
